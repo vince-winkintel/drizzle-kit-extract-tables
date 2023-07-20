@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1689787858464,
+      "tag": "0000_greedy_stature",
+      "breakpoints": true
+    }
+  ]
+}

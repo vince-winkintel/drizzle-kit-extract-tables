@@ -1,0 +1,35 @@
+{
+  "name": "drizzle-kit-extract-tables",
+  "version": "1.0.0",
+  "description": "provides a shell script to extract table definitions from a drizzle-kit schema file into separate files",
+  "scripts": {
+    "db:create-db": "npx ts-node src/create-db.ts",
+    "db:introspect": "npx drizzle-kit introspect:sqlite --config=./drizzle/drizzle.config.ts",
+    "db:extract-tables": "sh ./src/extract-tables.sh ./drizzle/introspect-out/schema.ts ./drizzle/introspect-out/tables",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vince-winkintel/drizzle-kit-extract-tables.git"
+  },
+  "keywords": [
+    "drizzle-kit",
+    "drizzle-orm"
+  ],
+  "author": "vince-winkintel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vince-winkintel/drizzle-kit-extract-tables/issues"
+  },
+  "homepage": "https://github.com/vince-winkintel/drizzle-kit-extract-tables#readme",
+  "devDependencies": {
+    "@types/better-sqlite3": "~7.6.4",
+    "drizzle-kit": "~0.19.8",
+    "ts-node": "~10.9.1",
+    "typescript": "~5.1.6"
+  },
+  "dependencies": {
+    "better-sqlite3": "~8.4.0",
+    "drizzle-orm": "~0.27.2"
+  }
+}
